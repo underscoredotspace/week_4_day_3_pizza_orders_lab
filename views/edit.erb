@@ -7,10 +7,10 @@
 
   <label for="pizza-select">Select a pizza:</label>
     <select id="pizza-select" name="topping">
-      <option value="Margherita">Margherita</option>
-      <option value="Calzone">Calzone</option>
-      <option value="Pepperoni">Pepperoni</option>
-      <option value="Italian Sausage">Italian Sausage</option>
+      <option value="Margherita" <%= 'selected' if @order.topping=='Margherita' %>>Margherita</option>
+      <option value="Calzone" <%= 'selected' if @order.topping=='Calzone' %>>Calzone</option>
+      <option value="Pepperoni" <%= 'selected' if @order.topping=='Pepperoni' %>>Pepperoni</option>
+      <option value="Italian Sausage" <%= 'selected' if @order.topping=='Italian Sausage' %>>Italian Sausage</option>
     </select>
 
   <label for="quantity">Quantity:</label>
