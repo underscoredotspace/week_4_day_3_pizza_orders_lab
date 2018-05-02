@@ -33,3 +33,8 @@ end
 
 
 # DELETE orders
+
+post '/pizza_orders/:id/delete' do |id|
+  PizzaOrder.delete(id)
+  redirect to('/pizza_orders')
+end
