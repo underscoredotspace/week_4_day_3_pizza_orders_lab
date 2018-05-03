@@ -36,12 +36,7 @@ get '/pizza_orders/:id/edit' do |id|
 end
 
 post '/pizza_orders/:id' do |id|
-  @order = PizzaOrder.find(id)
-  @order.first_name = params[:first_name]
-  @order.last_name = params[:last_name]
-  @order.topping = params[:topping]
-  @order.quantity = params[:quantity]
-  @order.update()
+  PizzaOrder.new(params).update()
   redirect to("/pizza_orders/#{id}")
 end
 
